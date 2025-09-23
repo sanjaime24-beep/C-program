@@ -1,0 +1,23 @@
+Arithmetic operator
+
+#include < stdio.h >
+int main () 
+{
+    int a = 10,b = 20,c= a-b;
+    printf("The Answer is : %d\n", c);
+    return 0;
+}
+
+The Answer is : 10
+=== Code Execution Successful ===
+
+#include <stdio.h>
+int main () 
+{
+    int a = 10.09,b = 22.54,c = a+b;
+    printf ("The sum of a and b : %d\n", c);
+    return 0;
+}
+
+The sum of a and b : 32
+=== Code Execution Successful ===

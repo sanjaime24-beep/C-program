@@ -1,0 +1,110 @@
+#include <stdio.h>
+
+int main() {
+    int roll;
+    char name[50], dept[50], sem[20];  
+    int Mechanics, FluidMechanics, Manufacturing, Mathematics, Thermodynamics, Python;
+    float per, avg;
+    int total;
+
+    printf("Student Details\n----------------\n");
+
+    printf("Student Name: ");
+    scanf("%49s", name);  
+
+    printf("Roll No: ");
+    scanf("%d", &roll);  
+
+    printf("Department: ");
+    scanf("%49s", dept);  
+
+    printf("Semester: ");
+    scanf("%19s", sem);  
+
+    printf("----------\nStudent Mark Details\n----------\n");
+    
+    printf("Enter mark for Mechanics       (out of 100): ");
+    scanf("%d", &Mechanics);
+    printf("Enter mark for Fluid Mechanics (out of 100): ");
+    scanf("%d", &FluidMechanics);
+    printf("Enter mark for Manufacturing   (out of 100): ");
+    scanf("%d", &Manufacturing);
+    printf("Enter mark for Mathematics     (out of 100): ");
+    scanf("%d", &Mathematics);
+    printf("Enter mark for Thermodynamics  (out of 100): ");
+    scanf("%d", &Thermodynamics);
+    printf("Enter mark for Python          (out of 100): ");
+    scanf("%d", &Python);
+
+    
+    total = Mechanics + FluidMechanics + Manufacturing + Mathematics + Thermodynamics + Python;
+    avg = total / 6.0;
+    per = (total / 600.0) * 100;  
+
+    printf("\n----- Result -----\n");
+    printf("Name: %s\n", name);
+    printf("Roll No: %d\n", roll);
+    printf("Department: %s\n", dept);
+    printf("Semester: %s\n", sem);
+    printf("Total marks   = %d / 600\n", total);
+    printf("Average marks = %.2f\n", avg);
+    printf("Percentage    = %.2f%%\n", per);
+
+    if (per >= 90) {
+        printf("Grade: A\n");
+    } else if (per >= 80) {
+        printf("Grade: B\n");
+    } else if (per >= 70) {
+        printf("Grade: C\n");
+    } else if (per >= 60) {
+        printf("Grade: D\n");
+    } else if (per >= 40) {
+        printf("Grade: E\n");
+    } else {
+        printf("Grade: F\n");
+    }
+
+    
+    if (Mechanics < 40 || FluidMechanics < 40 || Manufacturing < 40 ||
+        Mathematics < 40 || Thermodynamics < 40 || Python < 40) {
+        printf("Result: FAIL (One or more subjects below pass mark)\n");
+    } else if (per < 40) {
+        printf("Result: FAIL (Overall percentage below pass mark)\n");
+    } else {
+        printf("Result: PASS\n");
+    }
+
+    return 0;
+}
+
+----------OUTPUT----------
+
+Student Details
+----------------
+Student Name: Sanjai.N
+Roll No: 02448
+Department: MECH
+Semester: Third
+----------
+Student Mark Details
+----------
+Enter mark for Mechanics       (out of 100): 89
+Enter mark for Fluid Mechanics (out of 100): 98
+Enter mark for Manufacturing   (out of 100): 79
+Enter mark for Mathematics     (out of 100): 69
+Enter mark for Thermodynamics  (out of 100): 59
+Enter mark for Python          (out of 100): 49
+
+----- Result -----
+
+Name: Sanjai.N
+Roll No: 2448
+Department: MECH
+Semester: Third
+Total marks   = 443 / 600
+Average marks = 73.83
+Percentage    = 73.83%
+Grade: C
+Result: PASS
+
+=== Code Execution Successful ===

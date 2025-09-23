@@ -1,0 +1,13 @@
+Assigned value
+
+#include <stdio.h>
+int main() {
+int number; 
+    number = 25;     
+    printf("The assigned value is: %d\n", number);
+    return 0;
+}
+
+The assigned value is: 25
+
+=== Code Execution Successful ===

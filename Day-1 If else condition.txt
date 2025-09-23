@@ -1,0 +1,13 @@
+If else condition
+
+#include <stdio.h>
+int main () {
+    int a = 10;
+    if (a % 2 == 0) {
+    printf("The Given Number Is Even");}
+    else {
+    printf("The Given Number Is Odd"); }
+    return 0;}
+
+The Given Number Is Even
+=== Code Execution Successful ===

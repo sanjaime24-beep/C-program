@@ -1,0 +1,19 @@
+
+Increment and Decrement
+
+#include <stdio.h>
+int main() {
+    int a = 5;
+
+    printf("Initial value of a: %d\n", a);
+    a++;  
+    printf("After post-increment (a++): %d\n", a);
+    ++a;  
+    printf("After pre-increment (++a): %d\n", a);
+    a--; 
+    printf("After post-decrement (a--): %d\n", a);
+    --a;
+    printf("After pre-decrement (--a): %d\n", a);
+
+    return 0;
+}
