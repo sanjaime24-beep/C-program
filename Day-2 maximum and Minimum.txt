@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, num;
+    int max, min;
+
+    printf("Enter the number of values: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Invalid number of values.\n");
+        return 1;
+    }
+
+    // Input first number and initialize max and min
+    printf("Enter number 1: ");
+    scanf("%d", &num);
+    max = min = num;
+
+    for (i = 2; i <= n; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &num);
+
+        if (num > max) {
+            max = num;
+        }
+        if (num < min) {
+            min = num;
+        }
+    }
+
+    printf("Maximum value is: %d\n", max);
+    printf("Minimum value is: %d\n", min);
+
+    return 0;
+}
+
+OUTPUT
+
+Enter the number of values: 3
+Enter number 1: 7656543
+Enter number 2: 988976756
+Enter number 3: 66554
+Maximum value is: 988976756
+Minimum value is: 66554
