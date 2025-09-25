@@ -1,0 +1,24 @@
+Here is an example of a nested loop program in C that prints a multiplication table:
+C#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+
+    for (int i = 1; i <= rows; i++) {
+       
+        for (int j = 1; j <= cols; j++) {
+            printf("%4d", i * j); 
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output: The product of the current row and column indices is printed.
+
