@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+    int aSize, bSize, mSize, i, j;
+    int a[100], b[100], merged[200];
+    printf("Enter the size of the first array: ");
+    scanf("%d", &aSize);
+    printf("Enter %d elements for the first array:\n", aSize);
+    for (i = 0; i < aSize; i++) {
+        scanf("%d", &a[i]);
+    }
+    printf("Enter the size of the second array: ");
+    scanf("%d", &bSize);
+    printf("Enter %d elements for the second array:\n", bSize);
+    for (i = 0; i < bSize; i++) {
+        scanf("%d", &b[i]);
+    }
+    for (i = 0; i < aSize; i++) {
+        merged[i] = a[i];
+    }
+    for (j = 0; j < bSize; j++) {
+        merged[i + j] = b[j];
+    }
+    mSize = aSize + bSize;
+    printf("Merged array elements:\n");
+    for (i = 0; i < mSize; i++) {
+        printf("%d ", merged[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+OUTPUT
+
+Enter the size of the first array: 2
+Enter 2 elements for the first array:
+7 4
+Enter the size of the second array: 2
+Enter 2 elements for the second array:
+9 8
+Merged array elements:
+7 4 9 8 
+
+
+=== Code Execution Successful ===
