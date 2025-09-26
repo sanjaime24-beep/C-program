@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() {
+    int n, i;
+    int sumEven = 0, sumOdd = 0;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for(i = 0; i < n; i++) {
+        if(arr[i] % 2 == 0) {
+            sumEven += arr[i];
+        } else {
+            sumOdd += arr[i];
+        }
+    }
+    printf("Sum of even elements = %d\n", sumEven);
+    printf("Sum of odd elements = %d\n", sumOdd);
+    return 0;
+}
+
+OUTPUT
+
+Enter number of elements: 3
+Enter 3 elements:
+36 48 24 
+Sum of even elements = 108
+Sum of odd elements = 0
+
+
+=== Code Execution Successful ===
