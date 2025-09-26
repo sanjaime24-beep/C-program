@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main() {
+    int n, i;
+    int positive = 0, negative = 0, zero = 0;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for(i = 0; i < n; i++) {
+        if(arr[i] > 0) {
+            positive++;
+        } else if(arr[i] < 0) {
+            negative++;
+        } else {
+            zero++;
+        }
+    }
+    printf("Number of positive elements: %d\n", positive);
+    printf("Number of negative elements: %d\n", negative);
+    printf("Number of zeros: %d\n", zero);
+    return 0;
+}
+
+OUTPUT
+
+Enter number of elements: 3
+Enter 3 elements:
+4 8 69
+Number of positive elements: 3
+Number of negative elements: 0
+Number of zeros: 0
+
+
+=== Code Execution Successful ===
